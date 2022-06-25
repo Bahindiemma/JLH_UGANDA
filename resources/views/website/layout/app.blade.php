@@ -42,18 +42,18 @@
 
 <header class="continer-fluid ">
     <div  class="header-top">
-        {{-- @foreach ($settings as $index => $val) --}}
+        @foreach ($settings as $index => $val)
         <div class="container">
             <div class="row col-det">
                 <div class="col-lg-6 d-none d-lg-block">
                     <ul class="ulleft">
                         <li>
                             <i class="far fa-envelope"></i>
-                            {{-- {{ $val->email }} --}}
+                            {{ $val->email }}
                             <span>|</span></li>
                         <li>
                             <i class="fas fa-phone-volume"></i>
-                            {{-- +{{ $val->mobile }} --}}
+                            +{{ $val->mobile }}
                             </li>
                     </ul>
                 </div>
@@ -62,16 +62,16 @@
                     <ul class="ulright">
                        <li> <small>Folow Us </small>:</li>
                         <li>
-                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="{{ $val->facebook }}"><i class="fab fa-facebook-square"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fab fa-twitter-square"></i></a>
+                            <a href="{{ $val->twitter }}"><i class="fab fa-twitter-square"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="{{ $val->instagram }}"><i class="fab fa-instagram"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="{{ $val->whatsapp }}"><i class="fab fa-whatsapp"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -81,7 +81,7 @@
                 </div>
             </div>
         </div>
-        {{-- @endforeach --}}
+        @endforeach
     </div>
     <div id="menu-jk" class="header-bottom">
         <div class="container">
