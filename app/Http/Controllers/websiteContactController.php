@@ -10,8 +10,6 @@ class websiteContactController extends Controller
 {
     public function index()
     {
-        // $settings = Settings::all();
-        // $data = Gallery::all()->union($settings);
         $about = DB::table('about')->get();
         $blog = DB::table('blog')->get();
         $settings = DB::table('settings')->get();
@@ -22,8 +20,6 @@ class websiteContactController extends Controller
     }
     public function about()
     {
-        // $settings = Settings::all();
-        // $data = Gallery::all()->union($settings);
         $about = DB::table('about')->get();
         $blog = DB::table('blog')->get();
         $settings = DB::table('settings')->get();
@@ -34,8 +30,7 @@ class websiteContactController extends Controller
     }
     public function blog()
     {
-        // $settings = Settings::all();
-        // $data = Gallery::all()->union($settings);
+
         $about = DB::table('about')->get();
         $blog = DB::table('blog')->get();
         $settings = DB::table('settings')->get();
@@ -46,8 +41,6 @@ class websiteContactController extends Controller
     }
     public function contact()
     {
-        // $settings = Settings::all();
-        // $data = Gallery::all()->union($settings);
         $about = DB::table('about')->get();
         $blog = DB::table('blog')->get();
         $settings = DB::table('settings')->get();
@@ -58,8 +51,7 @@ class websiteContactController extends Controller
     }
     public function gallery()
     {
-        // $settings = Settings::all();
-        // $data = Gallery::all()->union($settings);
+      
         $about = DB::table('about')->get();
         $blog = DB::table('blog')->get();
         $settings = DB::table('settings')->get();
@@ -70,8 +62,6 @@ class websiteContactController extends Controller
     }
     public function services()
     {
-        // $settings = Settings::all();
-        // $data = Gallery::all()->union($settings);
         $about = DB::table('about')->get();
         $blog = DB::table('blog')->get();
         $settings = DB::table('settings')->get();
