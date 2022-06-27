@@ -15,23 +15,21 @@ use App\Http\Controllers\{
 };
 
 //website routes
-Route::get('/', function () {
-    return view('website.index');
-});
 
-// Route::view(uri: '/contact', view: 'website.contact');
+Route::resource('/', websiteContactController::class, ['names' => ['index' => 'home']]);
 
-Route::resource('contact', websiteContactController::class);
+Route::view(uri: '/contact', view: 'website.contact');
 
-Route::view(uri: '/about', view: 'website.about');
+Route::get('about', [websiteContactController::class, 'about'])->name('about');
 
-Route::view(uri: '/blog', view: 'website.blog');
+Route::get('blog', [websiteContactController::class, 'blog'])->name('blog');
 
-// Route::view(uri: '/contact', view: 'website.contact');
+Route::get('contact', [websiteContactController::class, 'contact'])->name('contact');
 
-Route::view(uri: '/gallery', view: 'website.gallery');
+Route::get('gallery', [websiteContactController::class, 'gallery'])->name('gallery');
 
-Route::view(uri: '/services', view: 'website.services');
+Route::get('services', [websiteContactController::class, 'services'])->name('services');
+
 
 // Admin panel routes
 
@@ -50,5 +48,4 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('settings', SettingsController::class);
 
     Route::resource('faqs', FaqController::class);
-    
 });

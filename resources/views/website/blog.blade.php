@@ -18,9 +18,39 @@
 
 <!-- ################# Our Blog Starts Here#######################--->
 
-<div class="container">
-    <div class="row g-3">
-        <div class="col-12 col-md-6 col-lg-4">
+<div class="container my-3">
+    <div class="row">
+        <!-- Card with an image on left -->
+        @foreach($blog as $index => $val)
+        <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="img/blog/{{ $val->image }}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ $val->title }}</h5>
+                  <p class="card-text">{{ $val->description }}</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card with an image on left -->
+        @endforeach
+        
+          {{-- <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{ asset('assets/images/stories/story-4.jpg') }}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card with an image on left</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card with an image on left --> --}}
+        {{-- <div class="col-12 col-md-6 col-lg-4">
             <div class="card h-100 border-0 shadow-md">
                 <img src="{{ asset('assets/images/stories/story-1.jpg') }}"  style="height: 40vh; object-fit:cover !important;" class="card h-100-img-top" alt="A Street in Europe">
                 <div class="card-body d-flex flex-column">
@@ -50,9 +80,9 @@
                     <a href="#" class="btn btn-primary mt-auto">Read more</a>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
-    <div class="row g-3">
+    {{-- <div class="row g-3">
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card h-100 border-0 shadow-md">
                 <img src="{{ asset('assets/images/stories/story-4.jpg') }}"  style="height: 40vh; object-fit:cover !important;" class="card h-100-img-top" alt="A Street in Europe">
@@ -136,7 +166,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 
 @endsection

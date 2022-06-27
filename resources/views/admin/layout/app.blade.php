@@ -153,7 +153,7 @@
             </li><!-- End Profile Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('services.index') }}">
+                <a class="nav-link collapsed" href="#" disabled readonly>
                     <i class="bi bi-file-richtext"></i>
                     <span>Services</span>
                 </a>

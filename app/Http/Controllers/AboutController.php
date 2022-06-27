@@ -67,7 +67,7 @@ class AboutController extends Controller
         }
 
         $about->update($input);
-        
+
         return redirect()->route('about.index')
             ->with('success', 'about updated successfully.');
     }
